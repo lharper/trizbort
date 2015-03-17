@@ -412,7 +412,7 @@ namespace Trizbort
                 SetFailureReason("the word contains no text");
                 return false;
             }
-            if (!char.IsLetterOrDigit(word[0]))
+            if (!char.IsLetterOrDigit(word[0]) && !(word[0] == '#'))
             {
                 // the first character must be a letter or a digit
                 SetFailureReason("the word must begin with a letter or a digit");
